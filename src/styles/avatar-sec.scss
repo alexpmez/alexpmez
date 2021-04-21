@@ -1,0 +1,214 @@
+.avatar-card {
+    border: none;
+    box-sizing: border-box;
+}
+
+.avatar-card-home {
+    padding: 4rem 1rem 1rem 1rem;
+}
+
+.avatar-card-sec {
+    padding: 0;
+    display: block;
+}
+
+.avatar {
+    border: 1px solid $avatar-border-color;
+    border-radius: 100%;
+    height: 190px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 190px;
+    //z-index: 9;
+}
+
+.avatar-sec {
+    display: inline-block;
+    border: 1px solid $avatar-border-color;
+    border-radius: 100%;
+    height: 5.2rem;
+    margin: .5rem;
+    overflow: hidden;
+    position: relative;
+    width: 5.2rem;
+}
+
+@media (min-width: 500px) {
+    .avatar-sec {
+        float: left;
+        overflow: hidden;
+    }
+}
+
+.avatar-copy {
+    max-width: 29rem;
+    margin: 0 auto;
+    color: transparent;
+}
+
+.avatar-copy-sec {
+    text-align: center;
+    margin: auto;
+}
+
+@media (min-width: 440px) {
+    .avatar-copy-sec {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 500px) {
+    .avatar-copy-sec {
+        text-align: right;
+    }
+    .avatar-copy-sec .avatar-btn-sec {
+        float: left;
+    }
+}
+
+.avatar-copy-sec h4 {
+    text-align: left;
+}
+
+.avatar-copy-sec p {
+    text-align: left;
+}
+
+.avatar-card .card-title {
+    color: $color-light-sec;
+    font-family: 'raleway', sans-serif;
+    font-weight: 100;
+    margin-bottom: 0.4rem;
+    letter-spacing: .033rem;
+}
+
+.avatar-card .card-subtitle {
+    // color: $color-dark;
+    color: $color-accent;
+    font-size: .6rem;
+    text-transform: uppercase;
+    letter-spacing: .13rem;
+    letter-spacing: 0.070rem;
+    line-height: 1rem;
+    font-family: 'merriweather', georgia, serif;
+    font-weight: normal;
+}
+
+.avatar-card .skills-divider {
+    font-weight: 100;
+    color: rgb(164, 178, 184);
+}
+
+.avatar-card .card-title span {
+    color: $color-dark;
+    font-family: 'raleway', sans-serif;
+    font-weight: 900;
+}
+
+.avatar-copy .card-text {
+    margin-top: 1.2rem;
+    max-width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: $color-dark;
+    font-size: .9rem;
+    font-family: 'open_sans', sans-serif;
+    font-weight: 100;
+}
+
+.avatar-copy .btn,
+.avatar-copy-sec .btn {
+    display: inline-block;
+    width: 4.2rem;
+    height: 4.2rem;
+    margin: .1rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+@media (min-width: 370px) {
+    .avatar-copy .btn,
+    .avatar-copy-sec .btn {
+        width: 5.2rem;
+        height: 5.2rem;
+        margin: .2rem;
+    }
+}
+
+.avatar-btn-copy,
+.avatar-copy .btns,
+.avatar-copy-sec .btns {
+    text-transform: uppercase;
+    text-decoration: none;
+    //font-size: .4rem;
+    font-size: .6rem;
+    color: $white;
+    text-align: center;
+    letter-spacing: .06rem;
+}
+
+@media (min-width: 370px) {
+    .avatar-btn-copy,
+    .avatar-copy .btns,
+    .avatar-copy-sec .btns {
+        font-size: .7rem;
+    }
+}
+
+.avatar-copy .btns,
+.avatar-copy-sec .btns {
+    background-color: $color-dark;
+}
+
+@media (pointer:fine) {
+    .avatar-btn-copy:hover,
+    .avatar-copy .btns:hover,
+    .avatar-copy-sec .btns:hover {
+        background-color: $color-light-sec;
+        color: rgba(255, 255, 255, .8);
+    }
+}
+
+@media (pointer:fine) {
+    .avatar-copy .btns:hover::before,
+    .avatar-copy-sec .btns:hover::before {
+        border-color: $color-light-sec;
+    }
+}
+
+@media (pointer:fine) {
+    .avatar-copy .active-btn:hover,
+    .avatar-copy-sec .active-btn:hover {
+        background-color: $color-light-sec;
+        color: white;
+        background-color: transparent;
+        color: $color-dark-light;
+    }
+}
+
+@media (min-width: 370px) {
+    .avatar-btn-copy,
+    .avatar-copy .btns,
+    .avatar-copy-sec .btns {
+        font-size: .7rem;
+    }
+}
+
+.avatar-copy .btn:focus,
+.avatar-copy-sec .btn:focus {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+}
+
+.avatar-btn {
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid $avatar-border-color;
+    height: 190px;
+    width: 190px;
+    display: relative;
+}

@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+///////////////// Firefox too bold fix //////////////
+
+/**
+* Fix fonts that render as bold in Firefox
+*
+* Put this near the top of your style.css
+* Before any overriding styles
+*/
+
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-weight: 400;
+}
+
+
+/**
+* Firefox specific rule
+*/
+
+@-moz-document url-prefix() {
+    body {
+        font-weight: lighter !important;
+    }
+}
+
+///////////////// End Firefox too bold fix //////////////
+//@import "~font-awesome/scss/font-awesome.scss";
+@import "./styles/colors.scss";
+@import "./styles/fonts.scss";
+@import "./styles/avatar-sec.scss";
+* {
+    //width: 100%;
+    text-align: center;
+}
+
+body,
+html {
+    height: auto;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    //image-rendering: pixelated;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+@-moz-document url-prefix() {
+    body {
+        font-weight: lighter !important;
+    }
+}
+
+body {
+    font-family: "open_sansregular", sans-serif;
+    /* font-family: 'AkkuratLightPro-Regular', Arial;*/
+    color: $color-dark;
+    background-color: $color-main-backg;
+    background-color: $black-squeeze;
+    font-weight: normal;
+    font-size: 1.1rem !important;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    text-align: center;
+    //padding-right: 0;
+    //padding-left: 0;
+    //padding: .2rem;
+    padding: .2rem 0 .2rem 0;
+    //padding: .2rem;
+}
+
+body .card {
+    background-color: transparent;
+}
+
+.horizontal-divider:not(.vertical):not(.horizontal) {
+    border-bottom: 1px solid rgb(215, 224, 228);
+    border-bottom: 1px solid rgb(226, 242, 250);
+    border-bottom: 1px solid rgb(218, 234, 242);
+    margin-bottom: .5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}

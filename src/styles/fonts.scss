@@ -1,0 +1,198 @@
+//$custom-font-path: "./fonts/custom-font/";
+//merriweather
+$merriweatherlight-path: "../assets/fonts/merriweather/merriweather-light/";
+$merriweatherregular-path: "../assets/fonts/merriweather/merriweather-regular/";
+$merriweatherblack-path: "../assets/fonts/merriweather/merriweather-black/";
+$merriweatherbold-path: "../assets/fonts/merriweather/merriweather-bold/";
+//opensans
+$opensansregular-path: "../assets/fonts/open-sans/opensans_regular/";
+$opensanslight-path: "../assets/fonts/open-sans/opensans_light/";
+$opensanssemibold-path: "../assets/fonts/open-sans/opensans_semibold/";
+$opensansbold-path: "../assets/fonts/open-sans/opensans_bold/";
+$opensansextrabold-path: "../assets/fonts/open-sans/opensans_extrabold/";
+//raleway
+$ralewayregular-path: "../assets/fonts/raleway/raleway-regular/";
+$ralewaylight-path: "../assets/fonts/raleway/raleway-light/";
+$ralewaymedium-path: "../assets/fonts/raleway/raleway-medium/";
+$ralewaysemibold-path: "../assets/fonts/raleway/raleway-semibold/";
+$ralewaybold-path: "../assets/fonts/raleway/raleway-bold/";
+$ralewayextrabold-path: "../assets/fonts/raleway/raleway-extrabold/";
+$fa-font-path: "~font-awesome/fonts";
+@font-face {
+    font-family: 'merriweather';
+    src: url($merriweatherlight-path + 'merriweather-light-webfont.eot');
+    src: url($merriweatherlight-path + 'merriweather-light-webfont.ttf') format('truetype'), url($merriweatherlight-path + 'merriweather-light-webfont.woff2') format('woff2'), url($merriweatherlight-path + 'merriweather-light-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'merriweather';
+    src: url($merriweatherregular-path + 'merriweather-regular-webfont.eot');
+    src: url($merriweatherregular-path + 'merriweather-regular-webfont.ttf') format('truetype'), url($merriweatherregular-path + 'merriweather-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src: url($opensanslight-path + 'OpenSans-Light-webfont.eot');
+    src: url($opensanslight-path + 'OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url($opensanslight-path + 'OpenSans-Light-webfont.woff') format('woff'), url($opensanslight-path + 'OpenSans-Light-webfont.ttf') format('truetype'), url($opensanslight-path + 'OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src: url($opensansregular-path + 'OpenSans-Regular-webfont.eot');
+    src: url($opensansregular-path + 'OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url($opensansregular-path + 'OpenSans-Regular-webfont.woff') format('woff'), url($opensansregular-path + 'OpenSans-Regular-webfont.ttf') format('truetype'), url($opensansregular-path + 'OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src: url($opensanssemibold-path + 'OpenSans-Semibold-webfont.eot');
+    src: url($opensanssemibold-path + 'OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url($opensanssemibold-path + 'OpenSans-Semibold-webfont.woff') format('woff'), url($opensanssemibold-path + 'OpenSans-Semibold-webfont.ttf') format('truetype'), url($opensanssemibold-path + 'OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src: url($opensansextrabold-path + 'OpenSans-ExtraBold-webfont.eot');
+    src: url($opensansextrabold-path + 'OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'), url($opensansextrabold-path + 'OpenSans-ExtraBold-webfont.woff') format('woff'), url($opensansextrabold-path + 'OpenSans-ExtraBold-webfont.ttf') format('truetype'), url($opensansextrabold-path + 'OpenSans-ExtraBold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url($ralewaylight-path + 'raleway-light.eot');
+    src: url($ralewaylight-path + 'raleway-light.eot?#iefix') format('embedded-opentype'), url($ralewaylight-path + 'raleway-light.woff2') format('woff2'), url($ralewaylight-path + 'raleway-light.woff') format('woff'), url($ralewaylight-path + 'raleway-light.ttf') format('truetype'), url($ralewaylight-path + 'raleway-light.svg#ralewaylight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url($ralewayregular-path + 'raleway-regular.eot');
+    src: url($ralewayregular-path + 'raleway-regular.eot?#iefix') format('embedded-opentype'), url($ralewayregular-path + 'raleway-regular.woff2') format('woff2'), url($ralewayregular-path + 'raleway-regular.woff') format('woff'), url($ralewayregular-path + 'raleway-regular.ttf') format('truetype'), url($ralewayregular-path + 'raleway-regular.svg#ralewayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url($ralewaysemibold-path + 'raleway-semibold.eot');
+    src: url($ralewaysemibold-path + 'raleway-semibold.eot?#iefix') format('embedded-opentype'), url($ralewaysemibold-path + 'raleway-semibold.woff2') format('woff2'), url($ralewaysemibold-path + 'raleway-semibold.woff') format('woff'), url($ralewaysemibold-path + 'raleway-semibold.ttf') format('truetype'), url($ralewaysemibold-path + 'raleway-semibold.svg#ralewaysemibold') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url($ralewaybold-path + 'raleway-bold.eot');
+    src: url($ralewaybold-path + 'raleway-bold.eot?#iefix') format('embedded-opentype'), url($ralewaybold-path + 'raleway-bold.woff2') format('woff2'), url($ralewaybold-path + 'raleway-bold.woff') format('woff'), url($ralewaybold-path + 'raleway-bold.ttf') format('truetype'), url($ralewaybold-path + 'raleway-bold.svg#ralewaybold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url($ralewayextrabold-path + 'raleway-extrabold.eot');
+    src: url($ralewayextrabold-path + 'raleway-extrabold.eot?#iefix') format('embedded-opentype'), url($ralewayextrabold-path + 'raleway-extrabold.woff2') format('woff2'), url($ralewayextrabold-path + 'raleway-extrabold.woff') format('woff'), url($ralewayextrabold-path + 'raleway-extrabold.ttf') format('truetype'), url($ralewayextrabold-path + 'raleway-extrabold.svg#ralewayextrabold') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/*
+@font-face {
+    font-family: "custom-font";
+    src: url($custom-font-path + "custom-font.eot");
+    src: url($custom-font-path + "custom-font.eot?#iefix") format("embedded-opentype"), url($custom-font-path + "custom-font.woff") format("woff"), url($custom-font-path + "custom-font.ttf") format("truetype"), url($custom-font-path + "custom-font.svg#custom-font") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*="icon-"]:before {
+    font-family: "custom-font" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-illustrator:before {
+    content: "\61";
+}
+
+.icon-photoshop:before {
+    content: "\62";
+}
+
+.icon-signature:before {
+    content: "\63";
+}
+
+.icon-semantic-ui:before {
+    content: "\64";
+}
+
+.icon-bootstrap:before {
+    content: "\66";
+}
+
+.icon-typescript:before {
+    content: "\67";
+}
+
+.icon-android-open:before {
+    content: "\76";
+}
+
+.icon-chevron-right:before {
+    content: "\7a";
+}
+
+.icon-chevron-up:before {
+    content: "\41";
+}
+
+.icon-settings-streamline-1:before {
+    content: "\46";
+}
+
+.icon-settings-streamline-2:before {
+    content: "\47";
+}
+
+.icon-chevron-left:before {
+    content: "\70";
+}
+
+.icon-education:before {
+    content: "\79";
+}
+
+.icon-user:before {
+    content: "\43";
+}
+
+.icon-file-text-1:before {
+    content: "\68";
+}
+
+.icon-firebase:before {
+    content: "\65";
+}
+
+.icon-jquery:before {
+    content: "\69";
+}
+*/
