@@ -1,0 +1,62 @@
+@import '../../styles/colors.scss';
+.first-title-item {
+    color: $color-light-sec;
+    font-family: 'raleway', sans-serif;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+.second-title-item {
+    color: $color-dark;
+}
+
+.contact .first-title-item {
+    color: $color-light-sec;
+    font-family: 'raleway', sans-serif;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+.contact .second-title-item {
+    color: $color-dark;
+    font-family: 'open_sans', sans-serif;
+    font-weight: 900;
+}
+
+.first-title-item,
+.second-title-item {
+    font-size: 2rem;
+}
+
+.sec-title {
+    max-width: 12rem;
+    margin: 2rem auto;
+}
+
+@media(min-width: 400px) {
+    .sec-title {
+        margin: 3rem auto;
+    }
+}
+
+.title {
+    color: $color-dark;
+    font-family: 'open_sans', sans-serif;
+    font-weight: 900;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: $regent-gray;
+    font-family: 'merriweather', georgia, serif;
+    font-weight: normal;
+    font-size: .5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    line-height: .9rem;
+}
+
+.sec-title .horizontal-divider:not(.vertical):not(.horizontal) {
+    max-width: 30%;
+}
