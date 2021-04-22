@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class EducationService {
-  educationalSec = [];
+  educationalSec:any = [];
 
   getEducSec = () => this.educationalSec = educationArr.slice(0); 
   

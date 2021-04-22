@@ -1,1 +1,47 @@
-<p>resume works!</p>
+<div class="container resume-sec">
+    <div class="btns">
+        <a [ngClass]="{active: resumeSec === 'profile'}" [ngStyle]="{cursor: resumeSec === 'profile' ? 'default' : 'pointer'}" (click)="changeResumeSec('profile')" (mouseover)="hover='profile'" (mouseleave)="hover='!profile'" class="btn btn-info btn-profile">
+            <i [ngStyle]="{color: getStyle(hover === 'profile' || resumeSec === 'profile')}" class="icon icon-user fa-2x" aria-hidden="true"></i>
+            <p class="resume-sec-titles">Profile</p>
+        </a>
+
+        <a [ngClass]="{active: resumeSec === 'skills'}" [ngStyle]="{cursor: resumeSec === 'skills' ? 'default' : 'pointer'}" (click)="changeResumeSec('skills')" (mouseover)="hover='skills'" (mouseleave)="hover='!skills'" class="btn btn-info btn-skills"><i [ngStyle]="{color: getStyle(hover === 'skills' || resumeSec === 'skills')}" class="icon icon-settings-streamline-2" aria-hidden="true"></i>
+            <p class="resume-sec-titles">Skills</p>
+        </a>
+        <a [ngClass]="{active: resumeSec === 'jobs'}" [ngStyle]="{cursor: resumeSec === 'jobs' ? 'default' : 'pointer'}" (click)="changeResumeSec('jobs')" (mouseover)="hover='jobs'" (mouseleave)="hover='!jobs'" class="btn btn-info btn-jobs"><i [ngStyle]="{color: getStyle(hover === 'jobs' || resumeSec === 'jobs')}" class="icon icon-settings-streamline-1" aria-hidden="true"></i>
+            <p class="resume-sec-titles">Employment</p>
+        </a>
+        <a [ngClass]="{active: resumeSec === 'education'}" [ngStyle]="{cursor: resumeSec === 'education' ? 'default' : 'pointer'}" (click)="changeResumeSec('education')" (mouseover)="hover='education'" (mouseleave)="hover='!education'" class="btn btn-info btn-education"><i [ngStyle]="{color: getStyle(hover === 'education' || resumeSec === 'education')}" class="icon icon-education fa-2x" aria-hidden="true"></i>
+            <p class="resume-sec-titles">Education</p>
+        </a>
+    </div>
+
+    <div class="row resume-main">
+        <div class="resume-sec-headers">
+            <h3 class="resume-sec-headers-items resume-sec-header-item-1">{{ getSecTitle(resumeSec) }}</h3>
+            <a [href]="downloadFile()" download="resume" (mouseover)="hover='pdf'" (mouseleave)="hover='!pdf'" id="pdf-js" class="resume-sec-headers-items  resume-sec-header-item-2">
+                <i [ngStyle]="{color: getStyle(hover === 'pdf' || resumeSec === 'pdf')}" class="resume-sec-header-item-2-1 icon icon-file-text-1"></i>
+                <p class="resume-sec-header-item-2-2">download resume</p>
+            </a>
+        </div>
+
+        <app-profile *ngIf="resumeSec === 'profile'" @fade></app-profile>
+
+        <app-skills *ngIf="resumeSec === 'skills'"></app-skills>
+
+        <ul [@jobs-edu]="aboutArr.length" (@jobs-edu.start)="getAnimationState($event)" (@jobs-edu.done)="getAnimationState($event)" *ngIf="resumeSec === 'jobs' || resumeSec === 'education'" [style.margin-top]="resumeSec === 'education' && {'margin-top': '1rem'}"
+            class="institutions-sec">
+            <li class="inst-sub-sec col-xs-12 all-thumbs" *ngFor="let about of aboutArr; let i = index;">
+
+                <h5 class="inst-items inst-item-1">{{ about.institution }}</h5>
+                <h6 class="inst-items inst-item-2">{{ about.title }}</h6>
+                <p class="inst-items inst-item-3">{{ about.duraction }}</p>
+                <p @expandedCollapsed (@expandedCollapsed.start)="getAnimationState2($event)" (@expandedCollapsed.done)="getAnimationState2($event)" *ngIf="animationState === 'done'" class="inst-items inst-item-4">{{ about.content }}</p>
+                <p [@expandedCollapsed]="animationState === 'done'" *ngIf="about.responsabilities && animationState === 'done' && animationState2 === 'done'" class="inst-items inst-item-5">{{ about.responsabilities }}</p>
+                <ul [@jobs-edu]="about.length && animationState2 === 'done'" *ngIf="about.tasks && animationState === 'done' && animationState2 === 'done'" class="tasks">
+                    <li *ngFor="let task of about.tasks" class="inst-items inst-item-6">{{ task }}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
