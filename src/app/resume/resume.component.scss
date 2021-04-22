@@ -1,0 +1,231 @@
+@import '../../styles/colors.scss';
+.resume-sec {
+    text-align: center;
+}
+
+.resume-main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40rem;
+    border-top: 1px dashed rgba(210, 221, 226, .8);
+    padding-top: 1rem;
+}
+
+.resume-sec-headers {
+    width: 100%;
+    display: flex;
+    //margin-bottom: 1rem;
+    //align-items: flex-start | flex-end | center | baseline | stretch;
+}
+
+@media(min-width: 550px) {
+    .resume-sec-headers {
+        margin-top: 2.2rem;
+    }
+}
+
+.resume-sec-header-item-1 {
+    font-family: 'raleway', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 1.8rem;
+    max-width: 15rem;
+    line-height: .9;
+    color: $color-dark;
+    //margin-bottom: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    //float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resume-sec-header-item-2 {
+    max-width: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    //padding-bottom: 1.2rem;
+}
+
+.resume-sec-header-item-2:hover {
+    text-decoration: none;
+}
+
+.resume-sec-header-item-2 .resume-sec-header-item-2-1 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: rgb(171, 184, 190);
+}
+
+.resume-sec-header-item-2 .resume-sec-header-item-2-1:hover,
+.resume-sec-header-item-2 .resume-sec-header-item-2-2:hover {
+    cursor: pointer;
+}
+
+.resume-sec-header-item-2 .resume-sec-header-item-2-2 {
+    font-family: 'merriweather', georgia, serif;
+    font-weight: 100;
+    color: $color-dark;
+    margin: 0;
+    padding: 0;
+    line-height: .7rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: .04rem;
+}
+
+.resume-sec-header-2 {
+    font-family: 'raleway', sans-serif;
+    font-weight: 900;
+    font-size: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inst-item-4,
+.inst-item-6,
+.resume-sec-copy,
+.resume-sec-copy .resume-sec-items {
+    font-family: 'raleway', sans-serif;
+    font-weight: normal;
+    text-align: left;
+    color: $color-dark-light;
+    font-size: .9rem;
+    letter-spacing: .03rem;
+    margin-top: .7rem;
+}
+
+.btns .btn-info {
+    color: $color-light-sec;
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    font-size: .8rem;
+    font-family: 'raleway', sans-serif;
+    font-weight: 100;
+}
+
+@media(min-width: 550px) {
+    .btns .btn-info {
+        letter-spacing: .04rem;
+    }
+}
+
+.btns i {
+    font-size: 1.6rem;
+}
+
+.btns .resume-sec-titles {
+    color: $color-dark;
+}
+
+.btns .active .resume-sec-titles {
+    font-family: 'raleway', sans-serif;
+    font-weight: bold;
+}
+
+.institutions-sec {
+    list-style: none;
+    padding-left: .7rem;
+    margin-top: 1rem;
+}
+
+.tasks {
+    list-style-type: square;
+}
+
+.inst-sub-sec {
+    border-left: 1px solid $avatar-border-color;
+    border-left: 1px solid $color-light-second;
+    padding-left: 2.8rem;
+    padding-bottom: 2.8rem;
+    position: relative;
+}
+
+.inst-sub-sec:last-child {
+    padding-bottom: 0;
+}
+
+.inst-sub-sec:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background: $color-light-third;
+    border-radius: 50%;
+}
+
+.tasks .task {
+    text-align: left;
+}
+
+.inst-items {
+    text-align: left;
+}
+
+.inst-item-1,
+.inst-item-2,
+.inst-item-3,
+.inst-item-4 {
+    margin-bottom: 0;
+}
+
+.inst-item-1,
+.inst-item-3,
+.inst-item-5 {
+    color: $color-dark;
+}
+
+.inst-item-3 {
+    font-size: .7rem;
+}
+
+.inst-item-1 {
+    font-size: 1rem;
+    //text-transform: uppercase;
+    font-family: 'raleway', sans-serif;
+    font-weight: 300;
+    margin-bottom: .6rem;
+    line-height: 1;
+}
+
+.inst-item-2 {
+    font-size: .8rem;
+    font-family: 'merriweather', georgia, serif;
+    font-weight: normal;
+    margin-bottom: .6rem;
+    color: $color-accent;
+}
+
+.inst-item-3 {
+    font-size: .8rem;
+    font-family: 'open_sans', sans-serif;
+    font-weight: 100;
+    margin-bottom: .3rem;
+}
+
+.inst-item-4 {
+    margin-bottom: .6rem;
+    margin-top: 0;
+}
+
+.inst-item-5 {
+    font-size: .89rem;
+    //text-transform: uppercase;
+    margin-bottom: 9px;
+    font-family: 'open_sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: .01rem;
+}
+
+.inst-item-6 {
+    margin-bottom: 9px;
+}

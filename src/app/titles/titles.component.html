@@ -1,1 +1,14 @@
-<p>titles works!</p>
+<div [ngClass]="{contact: (currentUrl() === '/contact')}" *ngFor="let header of titlesArr">
+    <div @fadeDrop *ngIf="currentUrl() === '/' + header.titleFirstWord || currentUrl() === '/' + header.titleSecondWord" class="sec-title">
+        <div class="title">
+            <span class="first-title-item">
+              {{header.titleFirstWord}}
+          </span>
+            <span class="second-title-item">
+              {{header.titleSecondWord}}
+          </span>
+        </div>
+        <div class="horizontal-divider"></div>
+        <h3 class="subtitle">{{ header.subtitle }}</h3>
+    </div>
+</div>
