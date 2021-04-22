@@ -1,0 +1,116 @@
+@import '../../../styles/colors';
+.resume-sec-items {
+    font-family: 'raleway', sans-serif;
+    font-weight: normal;
+    text-align: left;
+    color: #8c999f;
+    font-size: .9rem;
+    letter-spacing: .03rem;
+}
+
+.skills-sec-copy {
+    padding-top: .7rem;
+}
+
+.skills-title {
+    color: $color-dark;
+    font-weight: 900;
+}
+
+.skills-copy {
+    text-align: left;
+}
+
+.skills-bars {
+    margin-top: 2rem;
+}
+
+.skills {
+    margin-bottom: 2rem;
+}
+
+//==========> Progress Bar
+.skills-bars {
+    margin-top: 2rem;
+}
+
+.skills {
+    margin-bottom: 2rem;
+}
+
+.progress {
+    margin-top: .4rem;
+    height: .25rem;
+    background-color: white;
+    background-color: $color-light-third;
+    clear: both;
+}
+
+.progress-bar {
+    //width: 75%;
+    background-color: $color-accent;
+}
+
+.progress-label {
+    position: relative;
+    background-color: $color-accent;
+    text-align: center;
+    padding: .2rem;
+    max-width: 2rem;
+    border-radius: 3px 3px 3px 0;
+    color: white;
+    font-size: 9px;
+    font-family: 'open_sans', sans-serif;
+    font-weight: 600;
+}
+
+//label arrow
+.progress-label:after {
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    //left: 50%;
+    //margin-left: -5px;
+    margin-left: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: solid 5px $color-accent;
+    //border-left: solid 5px transparent;
+    border-right: solid 6px transparent;
+    //border-right: solid 5px transparent;
+}
+
+.skill-bar-title {
+    text-transform: capitalize;
+    float: left;
+    text-align: left;
+    color: $color-dark;
+    font-family: 'raleway', sans-serif;
+    font-weight: bold;
+    line-height: 1rem;
+}
+
+.skill-bar-title .skill-title-item-2 {
+    font-size: .7rem;
+    text-transform: lowercase;
+    font-family: 'raleway', sans-serif;
+    font-weight: 100;
+}
+
+@media(min-width: 420px) {
+    .skill-bar-title .skill-title-item-2 {
+        font-size: .8rem;
+    }
+}
+
+.skill-title-items-1-1 {
+    display: none;
+}
+
+@media(min-width: 500px) {
+    .skill-title-items-1-1 {
+        display: inline-block;
+    }
+}

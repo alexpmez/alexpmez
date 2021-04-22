@@ -1,1 +1,19 @@
-<p>skills works!</p>
+<div class="resume-sec-copy skills-sec-copy">
+    <div @fade class="resume-sec-items" (@fade.start)="getAnimationState($event)" (@fade.done)="getAnimationState($event)">
+        <p class="skills-copy"><span class="skills-title">{{ skillsCopy.design.title }}</span>{{ skillsCopy.design.copy }}</p>
+        <p class="skills-copy"><span class="skills-title">{{ skillsCopy.frontEnd.title }}</span>{{ skillsCopy.frontEnd.copy }}</p>
+    </div>
+    <div [@skillsAnimation]="skillsBarSec.length && animationState === 'done'">
+        <div *ngFor="let skillel of skillsBarSec" class="skills-bars">
+
+            <div class="skill-bar-title skill-title-item-1">{{ skillel.skills }}
+                <span class="skill-bar-title-items-1-1"><span class="skill-title-item-2">- {{ skillel.years }} </span><span class="skill-title-item-2"> year</span><span *ngIf="skillel.years > 1" class="skill-title-item-2">s</span><span class="skill-title-item-2"> experience</span></span>
+            </div>
+            <div class="progress-label" [ngStyle]="{'margin-left': skillel.percentage}">{{ skillel.percentage }}</div>
+
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" [ngStyle]="{'width': skillel.percentage}"></div>
+            </div>
+        </div>
+    </div>
+</div>
