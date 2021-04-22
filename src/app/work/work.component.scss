@@ -1,0 +1,415 @@
+@import '../../styles/colors.scss';
+.container .row {
+    padding-top: .75rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    padding: 0;
+    width: 900px;
+    margin: 20px auto;
+}
+
+li {
+    display: inline;
+}
+
+.thumbnailsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+
+@media (min-width: 1100px) {
+    .thumbnailsList {
+        max-width: 62rem;
+        width: 80%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .thumbnailsList {
+        width: 100%;
+    }
+}
+
+.filter-thumbs {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.btns {
+    width: 100%;
+}
+
+.btns .btn-info {
+    color: #7e888d;
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    font-size: .8rem;
+    letter-spacing: .04rem;
+    font-family: 'raleway', sans-serif;
+    font-weight: 100;
+}
+
+.btns .active {
+    color: $color-dark;
+    color: $color-accent;
+    font-family: 'raleway', sans-serif;
+    font-weight: bold;
+}
+
+.btns .btn {
+    padding: 0;
+}
+
+.btns .btn:hover {
+    color: $color-accent;
+}
+
+.btns .divider {
+    color: $color-light-forth;
+    font-family: 'merriweather', georgia, serif;
+    font-weight: 100;
+    margin: .5rem;
+}
+
+@media(min-width: 550px) {
+    .btns .divider {
+        margin: 1rem;
+    }
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.all-thumbs {
+    margin: .4rem;
+    height: 9rem !important;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 600px) {
+    .all-thumbs {
+        height: 10rem !important;
+    }
+}
+
+@media (min-width: 700px) {
+    .all-thumbs {
+        height: 11rem !important;
+    }
+}
+
+@media (min-width: 900px) {
+    .all-thumbs {
+        height: 12rem !important;
+    }
+}
+
+@media (min-width: 1100px) {
+    .all-thumbs {
+        height: 14rem !important;
+        //height: 15rem !important;
+    }
+}
+
+.all-thumbs-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.all-thumbs-items {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.all-thumbs-item-1 {
+    //background-color: orange;
+    height: 100%;
+    width: 100%;
+}
+
+.all-thumbs-item-2 {
+    color: white !important;
+    font-size: 0;
+    position: absolute;
+    //opacity: 0;
+    z-index: 2;
+    //background-color: rgba(175, 176, 184, .8);
+    /////// Thumb background overlay ///////
+    //background-color: rgba(0, 0, 0, .4);
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.all-thumbs-item-2:focus {
+    outline: 0;
+}
+
+.all-thumbs-item-2-1 {
+    padding: .5rem 1.4rem;
+    width: 100%;
+    outline: none;
+    font-family: 'raleway', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: .02rem;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    //background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.8);
+    //background-color: rgb(0, 0, 0);
+    //background-color: $color-accent;
+    //background-color: rgba(3, 142, 6, .8);
+    //background-color: rgba(145, 36, 36, .9);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.all-thumbs-item-2-1:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.all-thumbs-item-2-1-1 {
+    padding-right: .1rem;
+    font-family: 'raleway', sans-serif;
+    font-weight: 100;
+}
+
+.all-thumbs-item-2-2-1 {
+    font-family: 'raleway', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: 9rem;
+    padding-bottom: .3rem;
+    text-align: left;
+}
+
+.thumb {
+    width: 70%;
+}
+
+@media (min-width: 350px) {
+    .thumb {
+        width: 60%;
+    }
+}
+
+@media (min-width: 800px) {
+    .thumb {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .thumb {
+        width: 40%;
+    }
+}
+
+@media (min-width: 500px) {
+    .class-thumb-1 img,
+    .class-thumb-4 img,
+    .class-thumb-5 img,
+    .class-thumb-8 img,
+    .class-thumb-9 img,
+    .class-thumb-12 img,
+    .class-thumb-13 img {
+        width: 85%;
+    }
+}
+
+@media (min-width: 500px) {
+    .class-thumb-2,
+    .class-thumb-3,
+    .class-thumb-6,
+    .class-thumb-7,
+    .class-thumb-10,
+    .class-thumb-11,
+    .class-thumb-14 {
+        max-width: 40rem;
+        width: 56%;
+    }
+    .class-thumb-1,
+    .class-thumb-4,
+    .class-thumb-5,
+    .class-thumb-8,
+    .class-thumb-9,
+    .class-thumb-12,
+    .class-thumb-13 {
+        max-width: 10rem;
+        //max-width: 11rem;
+    }
+}
+
+//@media (min-width: 620px) {
+@media (min-width: 720px) {
+    .class-thumb-2,
+    .class-thumb-3,
+    .class-thumb-6,
+    .class-thumb-7,
+    .class-thumb-10,
+    .class-thumb-11,
+    .class-thumb-14 {
+        max-width: 40rem;
+        width: 50%;
+        //width: 60%;
+    }
+    .class-thumb-1,
+    .class-thumb-4,
+    .class-thumb-5,
+    .class-thumb-8,
+    .class-thumb-9,
+    .class-thumb-12,
+    .class-thumb-13 {
+        max-width: 13rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .class-thumb-2,
+    .class-thumb-3,
+    .class-thumb-6,
+    .class-thumb-7,
+    .class-thumb-10,
+    .class-thumb-11,
+    .class-thumb-14 {
+        max-width: 100%;
+        width: 60%;
+        //width: 70%;
+    }
+    .class-thumb-1,
+    .class-thumb-4,
+    .class-thumb-5,
+    .class-thumb-8,
+    .class-thumb-9,
+    .class-thumb-12,
+    .class-thumb-13 {
+        max-width: 15rem;
+    }
+}
+
+//Brand Icons
+.icons-sec {
+    display: none;
+    // background-color: $color-lighter;
+    //background-color: $squeeze;
+    background-color: $aqua-spring;
+    padding: 1.5rem .7rem 1.5rem .7rem;
+    margin-bottom: 3rem;
+}
+
+.icons-sec .icons {
+    max-height: 1.5rem;
+    margin: .5rem;
+}
+
+.icons-sec .icon-github,
+.icons-sec .icon-jenkins,
+.icons-sec .icon-angular {
+    max-height: 1.6rem;
+}
+
+.icons-sec .icon-jquery {
+    max-width: 4rem;
+}
+
+.icons-sec .icon-firebase {
+    max-height: 1.7rem;
+}
+
+.icons-sec .icon-npm {
+    max-width: 2.5rem;
+}
+
+@media(min-width: 768px) {
+    .icons-sec {
+        display: block;
+    }
+}
+
+/////////////// Btn Radial Out ///////////////////
+.btn-radial-out {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.btn-radial-out:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    //background: rgba(145, 36, 36, 0.5);
+    /////// thumb click me button background color ///////
+    background: rgba(0, 0, 0, 0.3);
+    //opacity: 0;
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.btn-radial-out:hover:before,
+.btn-radial-out:focus:before,
+.btn-radial-out:active:before {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    //opacity: 1;
+    //transition: all 0.5s ease-in;
+}
+
+////////////// End Btn Radial Out ///////////////
+.btn-radial-out:active:before {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    //opacity: 1;
+    //transition: all 0.5s ease-in;
+}
+
+////////////// End Btn Radial Out ///////////////

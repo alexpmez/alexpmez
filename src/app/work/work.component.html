@@ -1,1 +1,36 @@
-<p>work works!</p>
+<div class="icons-sec">
+    <img *ngFor="let icon of icons" [ngClass]="getIconClass(icon)" class="icons" src="{{getIconUrl(icon)}}">
+</div>
+
+<div class="row">
+    <div class="btns filter-thumbs">
+        <span class="divider">|</span>
+        <a class="btn btn-info" [ngClass]="{active: filterBy=='all'}" (click)="filterBy='all'">All</a>
+        <span class="divider">|</span>
+        <a class="btn btn-info" [ngClass]="{active: filterBy=='front-end'}" (click)="filterBy='front-end'">UI/UX Design - Front-End Development</a>
+        <span class="divider">|</span>
+        <a class="btn btn-info" [ngClass]="{active: filterBy=='design'}" (click)="filterBy='design'">Graphic Design</a>
+        <span class="divider">|</span>
+    </div>
+
+    <ul [@fade2]="visibleThumbs.length" class="thumbnailsList" id="thumbnailsList">
+        <li (mouseover)="thumbAnimation = checkForMobile(thumb.id)" (mouseleave)="thumbAnimation = checkForMobile(!thumb.id)" [ngClass]="thumbClass(thumb.id)" [routerLink]="['/project', thumb.id]" *ngFor="let thumb of (visibleThumbs | thumbFilter:filterBy)" class="col-xs-12 all-thumbs">
+
+            <div *ngIf="thumbAnimation === thumb.id" [@fade2]="fadeAnimation2 === !thumb.id" (mouseover)="thumbAnimationItem1 = thumb.id && fadeAnimation2 = thumb.id" (mouseleave)="thumbAnimationItem1 = !thumb.id && fadeAnimation2 = !thumb.id" class="all-thumbs-item-2 all-thumbs-items">
+                <div class="all-thumb-items-inside">
+                    <button class="all-thumbs-item-2-1 btn-radial-out">
+                          <span class="all-thumbs-item-2-1-1">view</span>{{ thumb.button }}
+                      </button>
+                </div>
+            </div>
+
+            <div [@thumbAnimation]="thumbAnimation === thumb.id ? 'highlighted' : 'unhighlighted'" [style.background-image]="getBackImg()" class="all-thumbs-item">
+                <a [@thumbAnimationItem1]="thumbAnimationItem1 === thumb.id ? 'highlighted' : 'unhighlighted'" class="all-thumbs-item-1 all-thumbs-items">
+                    <!-- <img src="{{thumb.fileName + .svg}}" [ngStyle]="{'width': thumb.width}" class="thumb"> -->
+                    <img src="{{getThumbTitleUrl(thumb.fileName)}}" [ngStyle]="{'width': thumb.width}" class="thumb">
+                </a>
+                <div [@overlay]="thumbAnimation === thumb.id ? 'overlayOff' : 'overlayOn'" [ngStyle]="{'background-color': 'rgba(0, 0, 0,' + thumb.opacity + ')'}" class="overlay"></div>
+            </div>
+        </li>
+    </ul>
+</div>

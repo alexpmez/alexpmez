@@ -1,1 +1,57 @@
-<p>project-detail works!</p>
+<div class="row project-detail-sec">
+    <div class="col-md-12 caption-row">
+        <nav class="navbar nav-arrows">
+            <button [ngClass]="{'nav-arrow-inactive': project.id === 1}" class="btn btn-fa" [routerLink]="['/project', getPrevProj(project.id)]">
+                  <i class="icon-chevron-left" aria-hidden="true"></i>
+              </button>
+
+            <button [ngClass]="{'nav-arrow-inactive': project.id === 10}" class="btn btn-fa" [routerLink]="['/project', getNextProj(project.id)]">
+                  <i class="icon-chevron-right" aria-hidden="true"></i>
+              </button>
+        </nav>
+    </div>
+
+    <div [@fade]="project.id" class="col-md-12 caption-row project-detail-sec">
+        <div class="project-copy">
+            <h2 class="project-title">{{ project.title }}</h2>
+
+            <div class="horizontal-divider"></div>
+
+            <div *ngFor="let copy of project.projectCopy">
+                <h5 class="project-sub-title"><span>{{ copy.titleFirstWord }}</span>{{ copy.titleSecondWord }}</h5>
+                <p *ngFor="let text of copy.mainCopy" class="project-description">{{ text }}</p>
+            </div>
+
+            <h5 class="project-sub-title">Tools<span> &amp; </span>Technologies</h5>
+            <ul class="project-tools">
+                <li *ngFor="let tool of project.projectTools; let i = index" class="icons-items">
+                    <img [ngClass]="getIconClass(tool)" class="icons" [src]="getImgUrl('icon', tool)">
+                    <span class="icons-copy">{{ removeDash(tool) }}</span>
+                    <span *ngIf="project.projectTools.length - 1 > i" class="divider">|</span>
+                </li>
+            </ul>
+        </div>
+
+        <button *ngIf="project.website" (click)="onNavigate()" class="btn btn-primary btn-website">
+              <span class="copy">{{ getButtonCopy() }}<span class="btn-website-icon">></span></span>
+              <!-- <span class="copy">View Web App<i class="icon icon-android-open"></i></span> -->
+            </button>
+
+
+        <div class="row">
+            <div *ngFor="let imgs of project.imgSec" [ngClass]="imgs.titleFirstWord === 'mobile' ? 'img-container-mobile' : 'img-container'" class="col-md-12 img-containers">
+                <h4 *ngIf="imgs.titleFirstWord" class="sec-title">{{ imgs.titleFirstWord }}<span>{{ imgs.titleSecondWord }}</span></h4>
+                <div *ngFor="let img of imgs.projectImg">
+                    <img [ngStyle]="(imgs.logoWidth) && {
+                      'max-width': imgs.logoWidth}" [ngClass]="{
+                      'mobile-img': imgs.titleFirstWord === 'mobile', 
+                      'desktop-img': imgs.titleFirstWord === 'desktop', 
+                      'img-container-1-item-1': imgs.titleFirstWord === 'logo'
+                  }" [src]="getImgUrl(imgs.titleFirstWord, img)">
+                    <div *ngIf="project.projectImgSpace" class="project-img-space"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

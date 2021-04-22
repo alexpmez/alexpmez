@@ -1,1 +1,54 @@
-<p>header works!</p>
+<div [ngClass]="{'avatar-card-home': checkHomeRoute(), 'avatar-card-sec': !checkHomeRoute()}" class="card avatar-card">
+
+    <div [ngClass]="{'avatar-copy': checkHomeRoute(), 'avatar-copy-sec': !checkHomeRoute()}">
+
+        <button routerLink="/" (click)="avatarFade = 'avatarFadeOut'" (mouseover)="avatarFade = 'avatarFadeIn'" (mouseleave)="avatarFade = 'avatarFadeOut'" [ngStyle]="{cursor: checkHomeRoute() ? 'default' : 'pointer', 
+      'background-color': checkHomeRoute() ? 'transparent' : 'rgb(61, 69, 73)',
+      'border-color': !checkHomeRoute() ? 'transparent' : 'rgb(61, 69, 73)'}" [ngClass]="{'avatar-btn-home': checkHomeRoute(), 'avatar-btn-sec': !checkHomeRoute(), 'btn-ripple-out': ((avatarFade === 'avatarFadeIn' && !checkHomeRoute()) && checkForMobile())}"
+            class="btn avatar-btn" type="submit">
+
+          <div *ngIf="!checkHomeRoute()" 
+          class="avatar-btn-copy">
+              <div class="avatar-btn-copy-item">HOME</div>
+          </div>
+
+          <div [@avatarFade]="avatarFade && checkForMobile()" *ngIf="!checkHomeRoute()" 
+          class="background-header-btns background-header-btn-home"></div>
+
+          <div @fade *ngIf="checkHomeRoute()" 
+          class="avatar-btn-sec-backg"></div>
+
+          <div *ngIf="checkHomeRoute()" [style.border]="((avatarFade === 'avatarFadeIn' && !checkHomeRoute()) && checkForMobile()) && {'border': 'none'}" class="avatar-btn-main-backg"></div>
+          <!-- <div *ngIf="checkHomeRoute()" [style.border]="((avatarFade === 'avatarFadeIn' && !checkHomeRoute()) && checkForMobile()) ? 'none' : ''" class="avatar-btn-main-backg"></div> -->
+
+      </button>
+
+        <h4 *ngIf="checkHomeRoute()" class="card-title">
+            {{ infoService.mainInfo.firstName + ' '}}
+            <span>{{ infoService.mainInfo.lastName }}</span>
+        </h4>
+
+        <h2 *ngIf="checkHomeRoute()" class="card-subtitle">
+            <span class="card-subtitle-1">{{ infoService.mainInfo.skillsItem1 }}</span>
+            <span class="card-subtitle-2">{{ infoService.mainInfo.skillsItem2 }}</span>
+            <span class="skills-divider">|</span>
+            <span class="card-subtitle-3">{{ infoService.mainInfo.skillsItem3 }}</span>
+            <span class="card-subtitle-4">{{ infoService.mainInfo.skillsItem4 }}</span>
+        </h2>
+
+        <p *ngIf="checkHomeRoute()" class="card-text card-text-1">
+            {{ infoService.mainInfo.mainMessage }}
+        </p>
+
+        <!-- <nav class="nav"> -->
+        <button routerLink="work" (mouseover)="rippleButton = 'workRippleOn'" (mouseleave)="rippleButton = 'workRippleOut'" [ngStyle]="{cursor: getRoute() === '/work' ? 'default' : 'pointer'}" [ngClass]="{'active-btn': getRoute() === '/work', 'btn-ripple-out': rippleButton === 'workRippleOn' && checkForMobile()}"
+            class="btn btns" type="submit">WORK</button>
+
+        <button routerLink="resume" (mouseover)="rippleButton = 'resumeRippleOn'" (mouseleave)="rippleButton = 'resumeRippleOut'" [ngStyle]="{cursor: getRoute() === '/resume' ? 'default' : 'pointer'}" [ngClass]="{'active-btn': getRoute() === '/resume', 'btn-ripple-out': rippleButton === 'resumeRippleOn' && checkForMobile()}"
+            class="btn btns" type="submit">RESUME</button>
+
+        <button routerLink="contact" (mouseover)="rippleButton = 'contactRippleOn'" (mouseleave)="rippleButton = 'contactRippleOut'" [ngStyle]="{cursor: getRoute() === '/contact' ? 'default' : 'pointer'}" [ngClass]="{'active-btn': getRoute() === '/contact', 'btn-ripple-out': rippleButton === 'contactRippleOn' && checkForMobile()}"
+            class="btn btns" type="submit">CONTACT</button>
+        <!-- </nav> -->
+    </div>
+</div>
